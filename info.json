@@ -1,0 +1,13 @@
+{
+    "name": "player_request_crafting_layout",
+    "version": "18.0.1",
+    "title": "Player Request Crafting Layout",
+    "author": "Muppet9010",
+    "contact": "",
+    "homepage": "https://mods.factorio.com/mod/player_request_crafting_layout",
+    "factorio_version": "0.18",
+    "dependencies": [
+        "base >= 0.18.15"
+    ],
+    "description": "A way for players to apply their crafting item layout to their logistics window"
+}

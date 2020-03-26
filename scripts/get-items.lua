@@ -17,7 +17,7 @@ GetItems.MakeOrderedItemList = function()
 
     local groups = {}
     for _, item in pairs(game.item_prototypes) do
-        if (item.flags == nil or item.flags["hidden"] ~= true) and item.subgroup.name ~= "tool" then
+        if (item.flags == nil or item.flags["hidden"] ~= true) and (item.type ~= "blueprint" and item.type ~= "deconstruction-item" and item.type ~= "upgrade-item" and item.type ~= "blueprint-book") then
             groups[item.group.name] = groups[item.group.name] or {name = item.group.name, order = item.group.order, subgroups = {}}
             local group = groups[item.group.name]
             group.subgroups[item.subgroup.name] = group.subgroups[item.subgroup.name] or {name = item.subgroup.name, order = item.subgroup.order, items = {}}

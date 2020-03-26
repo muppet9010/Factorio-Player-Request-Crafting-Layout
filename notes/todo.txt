@@ -1,0 +1,2 @@
+add a simple GUI for making selection.
+add options for only showing items with a request set. Either show in 1 big ordered list, 1 condensed category per line, 1 condensed group per line, 1 condensed subgroup per line, sparse crafting layout (initial layout)

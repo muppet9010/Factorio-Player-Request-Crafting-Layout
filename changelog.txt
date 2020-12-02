@@ -1,5 +1,14 @@
 ---------------------------------------------------------------------------------------------------
-Version: 18.0.0
+Version: 20.0.2
+Date: 2020-12-02
+  Features:
+    - Update to support Factorio 1.1.
+  Changes:
+  Bugfixes:
+    - Repair tool (tool subgroup) is not excluded any more, but some of its specific item types are, i.e. blueprints
+  Info:
+---------------------------------------------------------------------------------------------------
+Version: 18.0.1
 Date: 2020-03-25
   Features:
     - Initial Release

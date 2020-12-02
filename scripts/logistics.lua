@@ -14,13 +14,13 @@ Logistics.OnLuaShortcut = function(event)
 end
 
 Logistics.ApplyCraftingLayoutToPlayer = function(player)
-    if player.character == nil then
+    if player.character == nil or (not player.character.valid) then
         return
     end
 
     --record and remove all old requests
     local oldValues = {}
-    for i = 1, player.character_logistic_slot_count do
+    for i = 1, player.character.request_slot_count do
         local oldValue = player.get_personal_logistic_slot(i)
         if oldValue.name ~= nil then
             oldValues[oldValue.name] = oldValue
@@ -29,7 +29,6 @@ Logistics.ApplyCraftingLayoutToPlayer = function(player)
     end
 
     --add our new requests
-    player.character_logistic_slot_count = (global.getItems.orderedItemRows + #global.getItems.orderedItemGroups - 1) * 10
     local slotIndex = 0
     for _, group in pairs(global.getItems.orderedItemGroups) do
         for _, subgroup in pairs(group.subgroups) do
